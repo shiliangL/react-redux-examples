@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import AddToDo from "../constants/addToDo";
-import ToDoList from "../constants/toDoList";
-import Footer from "../constants/footer";
+import VisibleTodoList from "../constants/visibilityFilterList";
+import FooterLink from "../constants/footer";
 class TodoIndex extends Component {
   render() {
     return (
       <div>
         <AddToDo></AddToDo>
-        <ToDoList></ToDoList>
-        <Footer></Footer>
+        <VisibleTodoList></VisibleTodoList>
+        <FooterLink></FooterLink>
       </div>
     );
   }

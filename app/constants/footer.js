@@ -1,15 +1,20 @@
-import React, { Component } from 'react';
+import { connect } from 'react-redux'
+import { setVisibilityFilter } from '../actions'
+import Footer from '../components/Footer'
 
-class Footer extends Component {
-  render() {
-    return (
-      <div>
-        <span style={{cursor: 'pointer'}}>全部</span>
-        <span style={{margin:'0 10px',cursor: 'pointer'}}>待完成</span>
-        <span style={{cursor: 'pointer'}}>完成</span>
-      </div>
-    );
+const mapStateToProps = (state, ownProps) => ({
+  active: ownProps.filter === state.visibilityFilter
+})
+
+const mapDispatchToProps = (dispatch, ownProps) => ({
+  onClick: () => {
+    dispatch(setVisibilityFilter(ownProps.filter))
   }
-}
+})
 
-export default Footer;
+const FooterLink = connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Footer)
+
+export default FooterLink
