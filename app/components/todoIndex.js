@@ -5,7 +5,7 @@ import Footer from "../constants/footer";
 class TodoIndex extends Component {
   render() {
     return (
-      <div style={{width: "200px",margin:'0 auto' }}>
+      <div>
         <AddToDo></AddToDo>
         <ToDoList></ToDoList>
         <Footer></Footer>

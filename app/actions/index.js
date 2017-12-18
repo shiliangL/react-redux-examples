@@ -7,4 +7,11 @@ export const addToDo = text => {
     text
   };
 };
- export const toggleToDo = id => ({ type: "TOGGLE_TODO", id });
+export const toggleToDo = id => ({type: "TOGGLE_TODO", id});
+
+export const setVisibilityFilter = (filter)=>{
+  return {
+    type: "SET_VISIBILITY_FILTER",
+    filter
+  };
+}
